@@ -1,0 +1,14 @@
+body{
+    background-color: white;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+img{
+    max-width: 50px;
+    min-width: 50px;
+    max-height:50px;
+    min-height: 50px;
+}
