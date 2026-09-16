@@ -6,15 +6,31 @@ nav{
     flex-direction: row;
     justify-content: space-around;
 }
+aside{
+    justify-content: start;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#all{
+    display: flex;
+    flex-direction: row;
+}
+#albums{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
 .nav-logo{
     max-width: 50px;
     min-width: 50px;
     max-height:50px;
     min-height: 50px;
 }
-footer{
-    display: flex;
-    flex-direction: row;    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.album-images{
+    max-width: 50px;
+    min-width: 50px;
+    max-height:50px;
+    min-height: 50px;
 }
