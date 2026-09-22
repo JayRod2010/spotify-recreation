@@ -1,36 +1,397 @@
-body{
+
+css, 
+
+body {
+    background-color: #121212;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Text */
+
+p, h1, h2, h3, h4 {
+    color: white;
+    margin: 0;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 34px;
+    padding: 0 8px;
+}
+
+
+/* Spotify logo */
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.spot-icon {
+    width: 28px;
+    height: 28px;
+    filter: invert(100%);
+}
+
+
+/* Center navigation */
+
+.center-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.icon-background {
+    border-radius: 100px;
+    background-color: #242424;
+    padding: 7px;
+}
+
+
+.icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(100%);
+}
+
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #242424;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 250px;
+    gap: 8px;
+}
+
+
+.search-container input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 100%;
+    outline: none;
+}
+
+
+.search-container input::placeholder {
+    color: #b3b3b3;
+}
+
+
+/* Right navigation */
+
+.right-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.links-container p,
+.download-wrapper p,
+.right-wrapper > p {
+    font-size: 12px;
+}
+
+
+.download-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* Login button */
+
+.lgbtn {
+    border-radius: 20px;
+    border: none;
+    padding: 10px 16px;
     background-color: white;
+    color: black;
 }
-nav{
+
+
+/* Main */
+
+main {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    gap: 4px;
+    height: calc(100vh - 94px);
 }
-aside{
-    justify-content: start;
+
+
+/* Left library */
+
+#left-box {
+    background-color: #121212;
+    width: 22%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
-footer{
+
+
+/* Library header */
+
+.library-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px 20px 10px;
 }
-#all{
+
+
+.library-header h1 {
+    font-size: 14px;
+}
+
+
+.add-icon {
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+}
+
+
+/* Library cards */
+
+.library-card {
+    background-color: #242424;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+
+.library-card h2 {
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+
+.library-card p {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+
+.library-card button {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 10px;
+}
+
+
+/* Information at bottom of library */
+
+.info {
+    margin-top: auto;
+    padding: 10px;
+}
+
+
+.info-links {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
 }
-#albums{
+
+
+.info-links p {
+    font-size: 7px;
+    color: #b3b3b3;
+}
+
+
+/* Cookies */
+
+.cookie-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    margin-top: 5px;
+}
+
+
+.cookie-section h3 {
+    font-size: 8px;
+}
+
+
+.check-toggle {
+    width: 10px;
+    height: 10px;
+}
+
+
+/* Language button */
+
+.language-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    background-color: transparent;
+    border: 1px solid #b3b3b3;
+    border-radius: 20px;
+
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+
+.language-button img {
+    width: 12px;
+    height: 12px;
+    filter: invert(100%);
+}
+
+
+.language-button p {
+    font-size: 9px;
+}
+
+
+/* Right album section */
+
+#right-box {
+    background-color: #121212;
+    border-radius: 5px;
+
+    width: 78%;
+    height: 100%;
+
+    padding: 35px 15px 15px 15px;
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+
+.section-title {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+/* Album grid */
+
+.albums-container {
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(8, 1fr);
+    gap: 30px 12px;
 }
-.nav-logo{
-    max-width: 50px;
-    min-width: 50px;
-    max-height:50px;
-    min-height: 50px;
+
+
+/* Album cards */
+
+.album-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
-.album-images{
-    max-width: 50px;
-    min-width: 50px;
-    max-height:50px;
-    min-height: 50px;
+
+
+.album-art {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 7px;
+}
+
+
+.album-wrapper h2 {
+    font-size: 11px;
+    line-height: 15px;
+    margin-bottom: 3px;
+}
+
+
+.album-wrapper p {
+    font-size: 9px;
+    line-height: 13px;
+    color: #b3b3b3;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#gradient-box {
+    background: linear-gradient(
+        90deg,
+        rgba(238, 82, 255, 1) 0%,
+        rgba(87, 117, 199, 1) 50%,
+        rgba(87, 185, 255, 1) 100%
+    );
+
+    height: 36px;
+    padding: 0 10px;
+    margin: 4px;
+    box-sizing: border-box;
+}
+
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.footer-p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    margin: 0;
+}
+
+
+.signup-button {
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    padding: 8px 18px;
+    font-size: 10px;
 }
