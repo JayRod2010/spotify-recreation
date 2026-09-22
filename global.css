@@ -414,3 +414,23 @@ footer {
     padding: 8px 18px;
     font-size: 10px;
 }
+.image-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.image-checkbox {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.image-checkbox .img-checked {
+  display: none;
+}
+
+.image-checkbox input[type="checkbox"]:checked ~ .img-unchecked {
+  display: none;
+}
+
+.image-checkbox input[type="checkbox"]:checked ~ .img-checked {
+  display: inline-block;
+}
